@@ -1,0 +1,97 @@
+p{
+    padding: 25px 50px 70px 90px;
+    background-color: aqua;
+}
+.menu a, .footerbar{
+    background-color: blue;
+    overflow: hidden;
+    margin:14px;
+/* Home Section Enhancements */
+#home {
+    padding: 60px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4CAF50, #81c784); /* Subtle gradient background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: backgroundShift 5s ease-in-out infinite alternate, fadeIn 2s ease-out;
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: textAppear 1.5s ease-out;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    animation: textFadeIn 3s ease-out forwards;
+    animation-delay: 1s; /* Delay the paragraph's fade-in */
+}
+
+/* Subtle Background Gradient Animation */
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(135deg, #4CAF50, #81c784);
+    }
+    100% {
+        background: linear-gradient(135deg, #81c784, #4CAF50);
+    }
+}
+
+/* Text Appear Animation */
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text Fade In Animation */
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover Effects on Links and Buttons in Home Section */
+#home a:hover, #home button:hover {
+    color: #4CAF50;
+    background-color: white;
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+}
+
+/* Optional Particle Effect */
+#home:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('particles.png'); /* Add your particle effect image */
+    opacity: 0.1;
+    animation: floatParticles 10s linear infinite;
+}
+
+@keyframes floatParticles {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1000px 1000px;
+    }
+}
+
